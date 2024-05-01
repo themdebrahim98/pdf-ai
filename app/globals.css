@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+.center {
+  @apply fixed inset-0 z-50 overflow-x-hidden overflow-y-auto flex items-center justify-center outline-none focus:outline-none;
+}
+
+@layer components {
+  /* Define custom scrollbar styles */
+  /* For WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 45px; /* Width of the scrollbar thumb */
+  }
+}
